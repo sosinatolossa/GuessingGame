@@ -159,6 +159,7 @@ else if (userDifficultyLevelAnswer == "cheater")
         {
             //tell them this
             Console.WriteLine("Oo, you're a good one. Great job! You guessed it right!");
+            break;
         }
 
         Console.WriteLine($"You've guessed ({currentGuess}) times.");
