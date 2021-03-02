@@ -6,14 +6,16 @@ string secretNumber = "72";
 string SecretQuestion = "Guess the secret number";
 
 int num = 0;
+int currentGuess = 1;
 
-while (num < 4) {
-    
+while (num < 4)
+{
+
     Console.Write($"{SecretQuestion}: ");
     //we will save the user's guess as input and save it as a variable
     string answer = Console.ReadLine();
     //if the user's answer is not same as our secret number
-    if (answer != secretNumber) 
+    if (answer != secretNumber)
     {
         //print out this mssage
         Console.WriteLine($"You guessed wrong!! Muahahaha, maybe next time pal.");
@@ -22,6 +24,9 @@ while (num < 4) {
     {
         //tell them this
         Console.WriteLine("Oo, you're a good one. Great job! You guessed it right!");
+        break;
     }
+    Console.WriteLine($"Your guess ({currentGuess})");
+    currentGuess++;
     num++;
 }
