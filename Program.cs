@@ -1,7 +1,7 @@
 using System;
 
 int secretNumber = new Random().Next(1, 100);
-//Console.WriteLine(secretNumber);
+Console.WriteLine(secretNumber);
 
 //we will display a message to the user asking them to guess the secret number
 string SecretQuestion = "Guess the secret number";
@@ -22,6 +22,15 @@ while (num < 4)
     {
         //print out this mssage
         Console.WriteLine($"You guessed wrong!! Muahahaha, maybe next time pal.");
+
+        if (parsedAnswer > secretNumber)
+        {
+            Console.WriteLine("But your guess is too high. Try to go lower.");
+        }
+        else
+        {
+            Console.WriteLine("But your guess is too low. Try to go up.");
+        }
     }
     else //otherwise
     {
@@ -35,4 +44,5 @@ while (num < 4)
     Console.WriteLine($"You have {guessesLeft} guesses left but no pressure.");
     currentGuess++;
     num++;
+
 }
